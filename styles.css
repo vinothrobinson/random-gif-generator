@@ -37,3 +37,47 @@ img {
     margin-top: 20px;
     background-color: white;
 }
+
+@media screen and (max-width: 375px) {
+    img {
+        width: 50%;
+        height: 50%
+    }
+
+    #new-gif-form {
+        width: 50vw;
+    }
+}
+
+@media screen and (min-width: 420px) {
+    img {
+        width: 40%;
+        height: 40%
+    }
+
+    #new-gif-form {
+        width: 35vw;
+    }
+}
+
+@media screen and (min-width: 750px) {
+    img {
+        width: 40%;
+        height: 40%
+    }
+
+    #new-gif-form {
+        width: 20vw;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    img {
+        width: 30%;
+        height: 30%
+    }
+
+    #new-gif-form {
+        width: 10vw;
+    }
+}
