@@ -10,7 +10,12 @@ function fetchGif(defaultString) {
             return response.json();
         }).then(function(response) {
             img.src = response.data.images.original.url;
-        });
+        }).catch(function (response) {
+            if (response.data === []) {
+                defaultString = "error";
+                fetchGif(defaultString)
+            }
+        })
 }
 
 // Makes the form for changing the GIF appear and disappear
@@ -36,7 +41,17 @@ document.querySelector("#new-gif-form").addEventListener("submit", function(even
 function createNewGif() {
     const form = document.querySelector("#new-gif-form");
     form.style.display = "none";
-    isHiddenP = true;
     defaultString = document.querySelector("#title").value;
+    form.reset()
+    isHidden = true;
+    fetchGif(defaultString)
+}
+
+// Adds an event listener to the refresh button to refresh the GIF
+document.querySelector(".refresh-gif").addEventListener("click", function() {
+    refreshGif();
+})
+
+function refreshGif() {
     fetchGif(defaultString)
 }
