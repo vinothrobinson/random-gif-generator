@@ -17,8 +17,12 @@ img {
     height: 30%;
 }
 
-.new-gif {
+.new-gif, .refresh-gif {
     padding: 5px;
+}
+
+.refresh-gif {
+    margin-top: 20px;
 }
 
 #new-gif-form {
