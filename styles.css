@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(201, 251, 154);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+img {
+    padding: 20px;
+    width: 30%;
+    height: 30%;
+}
+
+.new-gif {
+    padding: 5px;
+}
+
+#new-gif-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border: solid black 1px;
+    width: 10vw;
+    height: 10vh;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: white;
+}
